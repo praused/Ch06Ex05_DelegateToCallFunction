@@ -32,8 +32,10 @@ namespace Ch06Ex05_DelegateToCallFunction
             input = Console.ReadLine();
             if (input.ToUpper() == "M")
                 process = new ProcessDelegate(Multiply);
+                //process = Multiply; //This works but it is less explicit coding
             else
                 process = new ProcessDelegate(Divide);
+                //process = Divide; //This works but it is less explicit coding
             Console.WriteLine($"Result: {process(param1, param2)}");
             Console.ReadKey();
         }
